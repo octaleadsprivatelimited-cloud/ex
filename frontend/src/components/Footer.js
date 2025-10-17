@@ -73,11 +73,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="footer-brand-section">
             <div className="footer-logo">
-              <div className="logo-icon">CC</div>
-              <div className="logo-text-wrapper">
-                <span className="logo-text">Corporate</span>
-                <span className="logo-accent">Consulting</span>
-              </div>
+              <img 
+                src="https://exigoconsulting.in/wp-content/uploads/2024/12/Untitled-design-10-1.png" 
+                alt="Exigo Consulting" 
+                className="footer-logo-image"
+              />
             </div>
             <p className="footer-description">
               Leading global consulting firm specializing in M&A, fundraising, and business transformation. 

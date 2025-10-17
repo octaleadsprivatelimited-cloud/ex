@@ -66,11 +66,11 @@ const Navbar = () => {
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
-            <div className="logo-icon">CC</div>
-            <div className="logo-text-wrapper">
-              <span className="logo-text">Corporate</span>
-              <span className="logo-accent">Consulting</span>
-            </div>
+            <img 
+              src="https://exigoconsulting.in/wp-content/uploads/2024/12/Untitled-design-10-1.png" 
+              alt="Exigo Consulting" 
+              className="logo-image"
+            />
           </Link>
 
           {/* Desktop Menu */}

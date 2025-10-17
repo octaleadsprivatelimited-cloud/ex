@@ -85,42 +85,15 @@
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
-.logo-icon {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, var(--secondary-blue), var(--accent-gold));
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 800;
-  font-size: 1.3rem;
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
-}
-
-.logo-text-wrapper {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.logo-text {
-  color: white;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
-.logo-accent {
-  color: var(--accent-gold);
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
-  font-weight: 600;
+.footer-logo-image {
+  height: 60px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  filter: brightness(1.2);
 }
 
 .footer-description {
