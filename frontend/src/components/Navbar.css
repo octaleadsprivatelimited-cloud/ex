@@ -82,22 +82,23 @@
 .navbar-cta {
   background: #86bc25;
   color: white !important;
-  padding: 0.6rem 1.6rem !important;
+  padding: 0.6rem 0.9rem !important;
   border-radius: 0;
   font-weight: 600;
   transition: all 0.2s ease;
   margin-left: 0.5rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
 }
 
 .navbar-cta:hover {
   background: #75a621;
+  transform: scale(1.05);
 }
 
 .cta-emoji {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   filter: brightness(0) invert(1);
 }
 

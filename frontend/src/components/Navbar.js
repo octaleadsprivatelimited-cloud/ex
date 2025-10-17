@@ -107,7 +107,7 @@ const Navbar = () => {
             <Link to="/team" className="navbar-link">Team</Link>
             <Link to="/blog" className="navbar-link">Blog</Link>
             <Link to="/contact" className="navbar-link navbar-cta">
-              <span className="cta-emoji">👤</span> Contact Us
+              <span className="cta-emoji">👤</span>
             </Link>
           </div>
 
