@@ -75,7 +75,6 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="navbar-menu-desktop">
-            <Link to="/" className="navbar-link">Home</Link>
             <Link to="/about" className="navbar-link">About</Link>
             
             <div 
@@ -168,17 +167,6 @@ const Navbar = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1, type: 'spring', stiffness: 100 }}
               >
-                <Link to="/" className="mobile-link">
-                  <div className="link-dot"></div>
-                  <span>Home</span>
-                </Link>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.15, type: 'spring', stiffness: 100 }}
-              >
                 <Link to="/about" className="mobile-link">
                   <div className="link-dot"></div>
                   <span>About</span>
@@ -189,7 +177,7 @@ const Navbar = () => {
                 className="mobile-dropdown"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
+                transition={{ delay: 0.15, type: 'spring', stiffness: 100 }}
               >
                 <button className="mobile-link dropdown-trigger" onClick={toggleMobileServices}>
                   <div className="link-dot"></div>
@@ -249,7 +237,7 @@ const Navbar = () => {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.25, type: 'spring', stiffness: 100 }}
+                transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
               >
                 <Link to="/industries" className="mobile-link">
                   <div className="link-dot"></div>
@@ -260,7 +248,7 @@ const Navbar = () => {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3, type: 'spring', stiffness: 100 }}
+                transition={{ delay: 0.25, type: 'spring', stiffness: 100 }}
               >
                 <Link to="/case-studies" className="mobile-link">
                   <div className="link-dot"></div>
@@ -271,7 +259,7 @@ const Navbar = () => {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.35, type: 'spring', stiffness: 100 }}
+                transition={{ delay: 0.3, type: 'spring', stiffness: 100 }}
               >
                 <Link to="/team" className="mobile-link">
                   <div className="link-dot"></div>
@@ -282,7 +270,7 @@ const Navbar = () => {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4, type: 'spring', stiffness: 100 }}
+                transition={{ delay: 0.35, type: 'spring', stiffness: 100 }}
               >
                 <Link to="/blog" className="mobile-link">
                   <div className="link-dot"></div>
@@ -294,7 +282,7 @@ const Navbar = () => {
                 className="mobile-menu-footer"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.45, type: 'spring', stiffness: 100 }}
+                transition={{ delay: 0.4, type: 'spring', stiffness: 100 }}
               >
                 <Link to="/contact" className="mobile-cta">
                   Get In Touch
