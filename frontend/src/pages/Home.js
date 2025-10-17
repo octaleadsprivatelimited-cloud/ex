@@ -55,23 +55,48 @@ const Home = () => {
 
   return (
     <div className="home">
-      {/* Hero Section */}
+      {/* Hero Section - Deloitte Inspired */}
       <section className="hero">
-        <div className="hero-content animate-fade-in">
-          <h1 className="hero-title">
-            Transform Your Business
-            <span className="hero-accent"> With Strategic Excellence</span>
-          </h1>
-          <p className="hero-subtitle">
-            Leading consulting firm specializing in M&A, fundraising, and business transformation. 
-            Partner with industry experts to unlock your organization's full potential.
-          </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">
-              Get Started <FaArrowRight />
+        <div className="hero-container">
+          <div className="hero-content animate-fade-in">
+            <div className="hero-tagline">Connecting Vision to Value</div>
+            <h1 className="hero-title">
+              Making an impact<br />
+              <span className="hero-accent">that matters.</span>
+            </h1>
+            <p className="hero-subtitle">
+              Since our inception, Exigo Consulting has been about creating connections. With our clients, our talent, and our communities. Connecting with leaders across industries, we are transforming businesses—driving growth that makes a difference.
+            </p>
+            <div className="hero-buttons">
+              <Link to="/contact" className="btn btn-primary">
+                Let's Connect <FaArrowRight />
+              </Link>
+              <Link to="/services" className="btn btn-secondary">
+                Explore Our Services
+              </Link>
+            </div>
+          </div>
+          <div className="hero-links">
+            <Link to="/services/mergers-acquisitions" className="hero-link">
+              <div className="hero-link-icon"><FaHandshake /></div>
+              <div>
+                <h3>Mergers & Acquisitions</h3>
+                <p>Strategic M&A advisory and execution</p>
+              </div>
             </Link>
-            <Link to="/services" className="btn btn-secondary">
-              Our Services
+            <Link to="/services/fund-raise" className="hero-link">
+              <div className="hero-link-icon"><FaChartLine /></div>
+              <div>
+                <h3>Fund Raise</h3>
+                <p>Capital raising and investment strategies</p>
+              </div>
+            </Link>
+            <Link to="/services/business-consulting" className="hero-link">
+              <div className="hero-link-icon"><FaLightbulb /></div>
+              <div>
+                <h3>Business Consulting</h3>
+                <p>Transform and optimize operations</p>
+              </div>
             </Link>
           </div>
         </div>
