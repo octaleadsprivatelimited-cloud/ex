@@ -5,43 +5,23 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './Home.css';
 
 const Home = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentBgSlide, setCurrentBgSlide] = useState(0);
 
-  const heroServices = [
-    {
-      icon: <FaHandshake />,
-      title: 'Mergers & Acquisitions',
-      description: 'Strategic M&A advisory and execution',
-      link: '/services/mergers-acquisitions'
-    },
-    {
-      icon: <FaChartLine />,
-      title: 'Fund Raise',
-      description: 'Capital raising and investment strategies',
-      link: '/services/fund-raise'
-    },
-    {
-      icon: <FaLightbulb />,
-      title: 'Business Consulting',
-      description: 'Transform and optimize operations',
-      link: '/services/business-consulting'
-    },
-    {
-      icon: <FaUsers />,
-      title: 'Talent Acquisition',
-      description: 'Finding and securing top-tier talent',
-      link: '/services/talent-acquisition'
-    }
+  const backgroundImages = [
+    'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074&auto=format&fit=crop'
   ];
 
-  // Auto-slide effect
+  // Auto-slide background effect
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroServices.length);
-    }, 4000); // Change slide every 4 seconds
+      setCurrentBgSlide((prev) => (prev + 1) % backgroundImages.length);
+    }, 5000); // Change background every 5 seconds
 
     return () => clearInterval(timer);
-  }, [heroServices.length]);
+  }, [backgroundImages.length]);
 
   const services = [
     {
@@ -115,63 +95,58 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          <div className="hero-slider-container">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
-                className="hero-slider"
-              >
-                <Link 
-                  to={heroServices[currentSlide].link} 
-                  className="hero-slide-link"
-                >
-                  <div className="hero-slide-icon">
-                    {heroServices[currentSlide].icon}
-                  </div>
-                  <div className="hero-slide-content">
-                    <h3>{heroServices[currentSlide].title}</h3>
-                    <p>{heroServices[currentSlide].description}</p>
-                  </div>
-                </Link>
-              </motion.div>
-            </AnimatePresence>
-            
-            {/* Slider Indicators */}
-            <div className="slider-indicators">
-              {heroServices.map((_, index) => (
-                <button
-                  key={index}
-                  className={`indicator ${index === currentSlide ? 'active' : ''}`}
-                  onClick={() => setCurrentSlide(index)}
-                  aria-label={`Go to slide ${index + 1}`}
+          <div className="hero-services-container">
+            {/* Background Image Slider */}
+            <div className="hero-bg-slider">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentBgSlide}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                  className="hero-bg-slide"
+                  style={{ backgroundImage: `url(${backgroundImages[currentBgSlide]})` }}
                 />
-              ))}
+              </AnimatePresence>
+              <div className="hero-bg-overlay"></div>
             </div>
 
-            {/* Navigation Arrows */}
-            <div className="slider-nav">
-              <button
-                className="slider-arrow prev"
-                onClick={() => setCurrentSlide((prev) => 
-                  prev === 0 ? heroServices.length - 1 : prev - 1
-                )}
-                aria-label="Previous slide"
-              >
-                ‹
-              </button>
-              <button
-                className="slider-arrow next"
-                onClick={() => setCurrentSlide((prev) => 
-                  (prev + 1) % heroServices.length
-                )}
-                aria-label="Next slide"
-              >
-                ›
-              </button>
+            {/* Static Service Links */}
+            <div className="hero-links">
+              <Link to="/services/mergers-acquisitions" className="hero-link">
+                <div className="hero-link-icon"><FaHandshake /></div>
+                <div>
+                  <h3>Mergers & Acquisitions</h3>
+                  <p>Strategic M&A advisory and execution</p>
+                </div>
+              </Link>
+              <Link to="/services/fund-raise" className="hero-link">
+                <div className="hero-link-icon"><FaChartLine /></div>
+                <div>
+                  <h3>Fund Raise</h3>
+                  <p>Capital raising and investment strategies</p>
+                </div>
+              </Link>
+              <Link to="/services/business-consulting" className="hero-link">
+                <div className="hero-link-icon"><FaLightbulb /></div>
+                <div>
+                  <h3>Business Consulting</h3>
+                  <p>Transform and optimize operations</p>
+                </div>
+              </Link>
+            </div>
+
+            {/* Background Slider Indicators */}
+            <div className="bg-slider-indicators">
+              {backgroundImages.map((_, index) => (
+                <button
+                  key={index}
+                  className={`bg-indicator ${index === currentBgSlide ? 'active' : ''}`}
+                  onClick={() => setCurrentBgSlide(index)}
+                  aria-label={`Go to background ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
