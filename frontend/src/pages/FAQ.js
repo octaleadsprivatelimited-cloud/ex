@@ -46,7 +46,12 @@ const FAQ = () => {
 
   return (
     <div className="faq-page">
-      <section className="faq-hero">
+      <section className="faq-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="faq-hero-content">
           <h1>Frequently Asked Questions</h1>
           <p>Find answers to common questions about our services</p>

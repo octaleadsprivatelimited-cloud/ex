@@ -63,7 +63,12 @@ const Blog = () => {
 
   return (
     <div className="blog-page">
-      <section className="blog-hero">
+      <section className="blog-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="blog-hero-content">
           <h1>Insights & Perspectives</h1>
           <p>Expert analysis and thought leadership on business strategy, M&A, and market trends</p>

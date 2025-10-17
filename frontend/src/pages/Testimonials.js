@@ -50,7 +50,12 @@ const Testimonials = () => {
 
   return (
     <div className="testimonials-page">
-      <section className="testimonials-hero">
+      <section className="testimonials-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="testimonials-hero-content">
           <h1>Client Testimonials</h1>
           <p>Hear what our clients have to say about working with us</p>

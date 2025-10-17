@@ -9,7 +9,12 @@ const Partners = () => {
 
   return (
     <div className="partners-page">
-      <section className="partners-hero">
+      <section className="partners-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="partners-hero-content">
           <h1>Our Partners</h1>
           <p>Collaborating with industry leaders to deliver exceptional value</p>

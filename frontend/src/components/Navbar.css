@@ -87,10 +87,18 @@
   font-weight: 600;
   transition: all 0.2s ease;
   margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .navbar-cta:hover {
   background: #75a621;
+}
+
+.cta-emoji {
+  font-size: 1.1rem;
+  filter: brightness(0) invert(1);
 }
 
 /* Enhanced Dropdown */

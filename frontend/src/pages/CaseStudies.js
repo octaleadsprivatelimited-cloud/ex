@@ -63,7 +63,12 @@ const CaseStudies = () => {
 
   return (
     <div className="case-studies-page">
-      <section className="case-studies-hero">
+      <section className="case-studies-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="case-studies-hero-content">
           <h1>Case Studies</h1>
           <p>Real results from real clients across industries</p>

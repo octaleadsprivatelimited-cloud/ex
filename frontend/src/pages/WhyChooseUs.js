@@ -28,7 +28,12 @@ const WhyChooseUs = () => {
 
   return (
     <div className="why-choose-page">
-      <section className="why-choose-hero">
+      <section className="why-choose-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="why-choose-hero-content">
           <h1>Why Choose Us</h1>
           <p>What sets us apart in the consulting industry</p>

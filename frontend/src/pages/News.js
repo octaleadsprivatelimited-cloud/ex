@@ -28,7 +28,12 @@ const News = () => {
 
   return (
     <div className="news-page">
-      <section className="news-hero">
+      <section className="news-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="news-hero-content">
           <h1>News & Updates</h1>
           <p>Latest news and announcements from Corporate Consulting</p>

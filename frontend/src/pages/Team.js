@@ -43,7 +43,12 @@ const Team = () => {
 
   return (
     <div className="team-page">
-      <section className="team-hero">
+      <section className="team-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="team-hero-content">
           <h1>Our Team</h1>
           <p>Meet the experts driving success for our clients worldwide</p>

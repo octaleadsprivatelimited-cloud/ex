@@ -19,7 +19,12 @@ const Industries = () => {
 
   return (
     <div className="industries-page">
-      <section className="industries-hero">
+      <section className="industries-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="industries-hero-content">
           <h1>Industries We Serve</h1>
           <p>Deep expertise across diverse sectors and markets</p>

@@ -26,7 +26,12 @@ const Events = () => {
 
   return (
     <div className="events-page">
-      <section className="events-hero">
+      <section className="events-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2012&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="events-hero-content">
           <h1>Events & Webinars</h1>
           <p>Join us at upcoming events and virtual sessions</p>

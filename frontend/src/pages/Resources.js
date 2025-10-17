@@ -14,7 +14,12 @@ const Resources = () => {
 
   return (
     <div className="resources-page">
-      <section className="resources-hero">
+      <section className="resources-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2028&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="resources-hero-content">
           <h1>Resources</h1>
           <p>Free guides, templates, and insights to help your business grow</p>

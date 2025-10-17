@@ -44,7 +44,12 @@ const Services = () => {
 
   return (
     <div className="services-page">
-      <section className="services-hero">
+      <section className="services-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="services-hero-content">
           <h1>Our Services</h1>
           <p>Comprehensive consulting solutions designed to drive your business forward</p>

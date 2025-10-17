@@ -106,7 +106,9 @@ const Navbar = () => {
             <Link to="/case-studies" className="navbar-link">Our thinking</Link>
             <Link to="/team" className="navbar-link">Team</Link>
             <Link to="/blog" className="navbar-link">Blog</Link>
-            <Link to="/contact" className="navbar-link navbar-cta">Contact Us</Link>
+            <Link to="/contact" className="navbar-link navbar-cta">
+              <span className="cta-emoji">👤</span> Contact Us
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

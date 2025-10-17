@@ -22,7 +22,12 @@ const About = () => {
 
   return (
     <div className="about-page">
-      <section className="about-hero">
+      <section className="about-hero" style={{
+        backgroundImage: 'linear-gradient(rgba(10, 17, 40, 0.7), rgba(10, 17, 40, 0.7)), url(https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
         <div className="about-hero-content">
           <h1>About Us</h1>
           <p>Transforming businesses through strategic excellence for over 25 years</p>
