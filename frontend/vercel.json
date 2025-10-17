@@ -1,8 +1,6 @@
 {
-  "buildCommand": "npm install && npm run build",
+  "buildCommand": "npm ci && npm run build",
   "outputDirectory": "build",
-  "framework": "create-react-app",
-  "installCommand": "npm install",
-  "devCommand": "npm start"
+  "installCommand": "npm ci"
 }
 
