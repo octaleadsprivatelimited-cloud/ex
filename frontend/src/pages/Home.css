@@ -471,37 +471,81 @@
   margin-top: 3rem;
 }
 
-/* Why Choose Us */
+/* Premium Why Choose Us Section */
 .why-choose-section {
-  padding: 6rem 8%;
-  background: white;
+  padding: 8rem 8%;
+  background: linear-gradient(135deg, #0a1128 0%, #1e40af 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+  opacity: 0.3;
 }
 
 .why-choose-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 6rem;
   max-width: 1400px;
   margin: 0 auto;
   align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.why-choose-text h2 {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+.why-choose-text .section-subtitle {
+  color: var(--accent-gold);
 }
 
 .why-choose-text p {
-  font-size: 1.1rem;
-  color: var(--text-light);
-  line-height: 1.8;
-  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.9;
+  margin: 2rem 0;
 }
 
 .why-choose-list {
   list-style: none;
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 }
 
 .why-choose-list li {
-  padding: 0.8rem 0;
-  font-size: 1.05rem;
-  color: var(--text-dark);
+  padding: 1.2rem 0;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+}
+
+.why-choose-list li::before {
+  content: '✓';
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
 }
 
 .why-choose-visual {
@@ -511,26 +555,43 @@
 }
 
 .visual-stat {
-  background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
-  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 3rem;
   border-radius: 20px;
   text-align: center;
   color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+}
+
+.visual-stat:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .visual-stat h3 {
-  font-size: 3rem;
-  color: white;
-  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  color: var(--accent-gold);
+  margin-bottom: 0.8rem;
+  font-weight: 900;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .visual-stat p {
-  font-size: 1rem;
-  opacity: 0.9;
+  font-size: 1.1rem;
+  opacity: 0.95;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .visual-stat:nth-child(3) {
   grid-column: 1 / -1;
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* Testimonials */
