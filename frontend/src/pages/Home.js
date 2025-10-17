@@ -1,28 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaChartLine, FaHandshake, FaLightbulb, FaUsers, FaArrowRight, FaStar } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
 import './Home.css';
 
 const Home = () => {
-  const [currentBgSlide, setCurrentBgSlide] = useState(0);
-
-  const backgroundImages = [
-    'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074&auto=format&fit=crop'
-  ];
-
-  // Auto-slide background effect
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentBgSlide((prev) => (prev + 1) % backgroundImages.length);
-    }, 5000); // Change background every 5 seconds
-
-    return () => clearInterval(timer);
-  }, [backgroundImages.length]);
-
   const services = [
     {
       icon: <FaHandshake />,
@@ -95,59 +76,28 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          <div className="hero-services-container">
-            {/* Background Image Slider */}
-            <div className="hero-bg-slider">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentBgSlide}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 1 }}
-                  className="hero-bg-slide"
-                  style={{ backgroundImage: `url(${backgroundImages[currentBgSlide]})` }}
-                />
-              </AnimatePresence>
-              <div className="hero-bg-overlay"></div>
-            </div>
-
-            {/* Static Service Links */}
-            <div className="hero-links">
-              <Link to="/services/mergers-acquisitions" className="hero-link">
-                <div className="hero-link-icon"><FaHandshake /></div>
-                <div>
-                  <h3>Mergers & Acquisitions</h3>
-                  <p>Strategic M&A advisory and execution</p>
-                </div>
-              </Link>
-              <Link to="/services/fund-raise" className="hero-link">
-                <div className="hero-link-icon"><FaChartLine /></div>
-                <div>
-                  <h3>Fund Raise</h3>
-                  <p>Capital raising and investment strategies</p>
-                </div>
-              </Link>
-              <Link to="/services/business-consulting" className="hero-link">
-                <div className="hero-link-icon"><FaLightbulb /></div>
-                <div>
-                  <h3>Business Consulting</h3>
-                  <p>Transform and optimize operations</p>
-                </div>
-              </Link>
-            </div>
-
-            {/* Background Slider Indicators */}
-            <div className="bg-slider-indicators">
-              {backgroundImages.map((_, index) => (
-                <button
-                  key={index}
-                  className={`bg-indicator ${index === currentBgSlide ? 'active' : ''}`}
-                  onClick={() => setCurrentBgSlide(index)}
-                  aria-label={`Go to background ${index + 1}`}
-                />
-              ))}
-            </div>
+          <div className="hero-links">
+            <Link to="/services/mergers-acquisitions" className="hero-link">
+              <div className="hero-link-icon"><FaHandshake /></div>
+              <div>
+                <h3>Mergers & Acquisitions</h3>
+                <p>Strategic M&A advisory and execution</p>
+              </div>
+            </Link>
+            <Link to="/services/fund-raise" className="hero-link">
+              <div className="hero-link-icon"><FaChartLine /></div>
+              <div>
+                <h3>Fund Raise</h3>
+                <p>Capital raising and investment strategies</p>
+              </div>
+            </Link>
+            <Link to="/services/business-consulting" className="hero-link">
+              <div className="hero-link-icon"><FaLightbulb /></div>
+              <div>
+                <h3>Business Consulting</h3>
+                <p>Transform and optimize operations</p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
