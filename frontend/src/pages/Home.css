@@ -105,15 +105,18 @@
   position: relative;
   min-height: 400px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
-/* Background Image Slider */
+/* Background Image Slider - Half Section */
 .hero-bg-slider {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 50%;
+  transform: translateY(-50%);
   z-index: 0;
 }
 
