@@ -16,12 +16,21 @@
     "start": "react-scripts start",
     "build": "CI=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "echo 'Build completed successfully!'"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   },
   "eslintConfig": {
     "extends": [
       "react-app"
-    ]
+    ],
+    "rules": {
+      "no-unused-vars": "warn",
+      "jsx-a11y/anchor-is-valid": "warn"
+    }
   },
   "browserslist": {
     "production": [
