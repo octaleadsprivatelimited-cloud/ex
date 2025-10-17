@@ -75,20 +75,6 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div className="hero-visual">
-          <div className="hero-card card-1">
-            <FaChartLine className="card-icon" />
-            <h3>500+ Projects</h3>
-          </div>
-          <div className="hero-card card-2">
-            <FaHandshake className="card-icon" />
-            <h3>98% Success Rate</h3>
-          </div>
-          <div className="hero-card card-3">
-            <FaLightbulb className="card-icon" />
-            <h3>$10B+ Value</h3>
-          </div>
-        </div>
       </section>
 
       {/* Stats Section */}
