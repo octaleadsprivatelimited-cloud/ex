@@ -1,63 +1,7 @@
-/* Deloitte-Inspired Top Bar */
-.top-bar {
-  background: #0a1128;
-  color: white;
-  padding: 0.5rem 0;
-  font-size: 0.8rem;
-  transition: all 0.3s ease;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1001;
-  border-bottom: 1px solid rgba(134, 188, 37, 0.2);
-}
-
-.top-bar.hidden {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-.top-bar-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 4%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top-bar-left,
-.top-bar-right {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.top-bar-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  opacity: 0.9;
-  font-weight: 400;
-}
-
-.top-bar-link {
-  color: white;
-  opacity: 0.9;
-  transition: all 0.3s ease;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.top-bar-link:hover {
-  opacity: 1;
-  color: #86bc25;
-}
-
 /* Black Header with White Text */
 .navbar {
   position: fixed;
-  top: 33px;
+  top: 0;
   width: 100%;
   background: #000000;
   z-index: 1000;
@@ -66,7 +10,6 @@
 }
 
 .navbar.scrolled {
-  top: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
@@ -550,14 +493,6 @@
 }
 
 @media (max-width: 1024px) {
-  .top-bar {
-    display: none;
-  }
-
-  .navbar {
-    top: 0;
-  }
-
   .navbar-menu-desktop {
     display: none;
   }

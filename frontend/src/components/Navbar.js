@@ -49,20 +49,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top Bar - Desktop Only */}
-      <div className={`top-bar ${isScrolled ? 'hidden' : ''}`}>
-        <div className="top-bar-container">
-          <div className="top-bar-left">
-            <span className="top-bar-item"><FaPhone /> +91 80089 22112</span>
-            <span className="top-bar-item"><FaEnvelope /> rg@exigoconsulting.in</span>
-          </div>
-          <div className="top-bar-right">
-            <Link to="/careers" className="top-bar-link">Careers</Link>
-            <Link to="/resources" className="top-bar-link">Resources</Link>
-          </div>
-        </div>
-      </div>
-
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
