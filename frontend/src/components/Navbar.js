@@ -61,7 +61,7 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="navbar-menu-desktop">
-            <Link to="/about" className="navbar-link">About</Link>
+            <Link to="/about" className="navbar-link">Who we are</Link>
             
             <div 
               className="navbar-dropdown"
@@ -69,7 +69,7 @@ const Navbar = () => {
               onMouseLeave={() => setServicesDropdown(false)}
             >
               <span className="navbar-link dropdown-trigger">
-                Services <FaChevronDown className="dropdown-icon" />
+                What we do <FaChevronDown className="dropdown-icon" />
               </span>
               <div className={`dropdown-menu ${servicesDropdown ? 'show' : ''}`}>
                 <div className="dropdown-content">
@@ -103,7 +103,7 @@ const Navbar = () => {
             </div>
 
             <Link to="/industries" className="navbar-link">Industries</Link>
-            <Link to="/case-studies" className="navbar-link">Case Studies</Link>
+            <Link to="/case-studies" className="navbar-link">Our thinking</Link>
             <Link to="/team" className="navbar-link">Team</Link>
             <Link to="/blog" className="navbar-link">Blog</Link>
             <Link to="/contact" className="navbar-link navbar-cta">Contact Us</Link>
@@ -155,7 +155,7 @@ const Navbar = () => {
               >
                 <Link to="/about" className="mobile-link">
                   <div className="link-dot"></div>
-                  <span>About</span>
+                  <span>Who we are</span>
                 </Link>
               </motion.div>
               
@@ -167,7 +167,7 @@ const Navbar = () => {
               >
                 <button className="mobile-link dropdown-trigger" onClick={toggleMobileServices}>
                   <div className="link-dot"></div>
-                  <span>Services</span>
+                  <span>What we do</span>
                   <motion.div
                     animate={{ rotate: mobileServicesOpen ? 180 : 0 }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
@@ -238,7 +238,7 @@ const Navbar = () => {
               >
                 <Link to="/case-studies" className="mobile-link">
                   <div className="link-dot"></div>
-                  <span>Case Studies</span>
+                  <span>Our thinking</span>
                 </Link>
               </motion.div>
 
