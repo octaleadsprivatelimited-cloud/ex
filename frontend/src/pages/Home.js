@@ -1,9 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaChartLine, FaHandshake, FaLightbulb, FaUsers, FaArrowRight, FaStar } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Home.css';
 
 const Home = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const heroServices = [
+    {
+      icon: <FaHandshake />,
+      title: 'Mergers & Acquisitions',
+      description: 'Strategic M&A advisory and execution',
+      link: '/services/mergers-acquisitions'
+    },
+    {
+      icon: <FaChartLine />,
+      title: 'Fund Raise',
+      description: 'Capital raising and investment strategies',
+      link: '/services/fund-raise'
+    },
+    {
+      icon: <FaLightbulb />,
+      title: 'Business Consulting',
+      description: 'Transform and optimize operations',
+      link: '/services/business-consulting'
+    },
+    {
+      icon: <FaUsers />,
+      title: 'Talent Acquisition',
+      description: 'Finding and securing top-tier talent',
+      link: '/services/talent-acquisition'
+    }
+  ];
+
+  // Auto-slide effect
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroServices.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(timer);
+  }, [heroServices.length]);
+
   const services = [
     {
       icon: <FaHandshake />,
@@ -76,28 +115,64 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          <div className="hero-links">
-            <Link to="/services/mergers-acquisitions" className="hero-link">
-              <div className="hero-link-icon"><FaHandshake /></div>
-              <div>
-                <h3>Mergers & Acquisitions</h3>
-                <p>Strategic M&A advisory and execution</p>
-              </div>
-            </Link>
-            <Link to="/services/fund-raise" className="hero-link">
-              <div className="hero-link-icon"><FaChartLine /></div>
-              <div>
-                <h3>Fund Raise</h3>
-                <p>Capital raising and investment strategies</p>
-              </div>
-            </Link>
-            <Link to="/services/business-consulting" className="hero-link">
-              <div className="hero-link-icon"><FaLightbulb /></div>
-              <div>
-                <h3>Business Consulting</h3>
-                <p>Transform and optimize operations</p>
-              </div>
-            </Link>
+          <div className="hero-slider-container">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.5 }}
+                className="hero-slider"
+              >
+                <Link 
+                  to={heroServices[currentSlide].link} 
+                  className="hero-slide-link"
+                >
+                  <div className="hero-slide-icon">
+                    {heroServices[currentSlide].icon}
+                  </div>
+                  <div className="hero-slide-content">
+                    <h3>{heroServices[currentSlide].title}</h3>
+                    <p>{heroServices[currentSlide].description}</p>
+                  </div>
+                </Link>
+              </motion.div>
+            </AnimatePresence>
+            
+            {/* Slider Indicators */}
+            <div className="slider-indicators">
+              {heroServices.map((_, index) => (
+                <button
+                  key={index}
+                  className={`indicator ${index === currentSlide ? 'active' : ''}`}
+                  onClick={() => setCurrentSlide(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* Navigation Arrows */}
+            <div className="slider-nav">
+              <button
+                className="slider-arrow prev"
+                onClick={() => setCurrentSlide((prev) => 
+                  prev === 0 ? heroServices.length - 1 : prev - 1
+                )}
+                aria-label="Previous slide"
+              >
+                ‹
+              </button>
+              <button
+                className="slider-arrow next"
+                onClick={() => setCurrentSlide((prev) => 
+                  (prev + 1) % heroServices.length
+                )}
+                aria-label="Next slide"
+              >
+                ›
+              </button>
+            </div>
           </div>
         </div>
       </section>
