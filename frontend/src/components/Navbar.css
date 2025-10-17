@@ -85,7 +85,7 @@
 .navbar-cta {
   background: transparent;
   color: white !important;
-  padding: 0.5rem !important;
+  padding: 0.3rem !important;
   border-radius: 0;
   transition: all 0.2s ease;
   margin-left: auto;
@@ -96,11 +96,11 @@
 }
 
 .navbar-cta:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 .cta-emoji {
-  font-size: 1.4rem;
+  font-size: 1rem;
   filter: brightness(0) invert(1);
 }
 
