@@ -38,8 +38,8 @@
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 50px;
   align-items: center;
 }
 
@@ -103,7 +103,7 @@
 /* Hero Services with Background Slider */
 .hero-services-container {
   position: relative;
-  min-height: 500px;
+  min-height: 600px;
   overflow: hidden;
 }
 
